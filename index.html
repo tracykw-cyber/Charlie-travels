@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My test page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .profile-img {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ccc;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 50px;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    thead {
+      background-color: #4a90d9;
+      color: #fff;
+    }
+
+    th, td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 0.9rem;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background-color: #f0f7ff;
+    }
+
+    td a {
+      color: #4a90d9;
+      text-decoration: none;
+    }
+
+    td a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>My test page</h1>
+  <img
+    class="profile-img"
+    src="https://lh3.googleusercontent.com/d/1FE4NdnS27ziDCudCxCxeKt708YAhfu9w"
+    alt="Profile photo"
+  >
+
+  <h2>Places Charlie Has Been To</h2>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Place</th>
+          <th>Type</th>
+          <th>Location</th>
+          <th>Charlie's Rating</th>
+          <th>Google Rating</th>
+          <th>Description / Pros</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Limelight</td>
+          <td>Hotel</td>
+          <td>Mammoth, CA</td>
+          <td>5 paws</td>
+          <td>4.5</td>
+          <td>Brand new spacious rooms, dog bed and bowl provided, super dog-friendly. Charlie loved looking out the window at the snow.</td>
+          <td><a href="https://www.limelighthotels.com/mammoth" target="_blank">limelighthotels.com</a></td>
+        </tr>
+        <tr>
+          <td>Westin Monarch</td>
+          <td>Hotel</td>
+          <td>Mammoth, CA</td>
+          <td>4 paws</td>
+          <td>3.8</td>
+          <td></td>
+          <td><a href="https://www.marriott.com/en-us/hotels/mmhwi-the-westin-monache-resort-mammoth/overview/" target="_blank">marriott.com</a></td>
+        </tr>
+        <tr>
+          <td>Shelter Distilling</td>
+          <td>Restaurant</td>
+          <td>Mammoth, CA</td>
+          <td></td>
+          <td>4.4</td>
+          <td></td>
+          <td><a href="https://shelterdistilling.com/" target="_blank">shelterdistilling.com</a></td>
+        </tr>
+        <tr>
+          <td>Sidedoor Winebar and Cafe</td>
+          <td>Restaurant</td>
+          <td>Mammoth, CA</td>
+          <td></td>
+          <td>4.0</td>
+          <td>Small outdoors area, can be crowded when cold outside.</td>
+          <td><a href="https://sidedoormammoth.com/" target="_blank">sidedoormammoth.com</a></td>
+        </tr>
+        <tr>
+          <td>Chevron / Jersey Mike's</td>
+          <td>Dog rest area</td>
+          <td>Lone Pine, CA</td>
+          <td></td>
+          <td>3.4</td>
+          <td></td>
+          <td><a href="https://www.jerseymikes.com/20314/lone-pine-ca" target="_blank">jerseymikes.com</a></td>
+        </tr>
+        <tr>
+          <td>Ventura Beach Marriott</td>
+          <td>Hotel</td>
+          <td>Ventura, CA</td>
+          <td></td>
+          <td>4.2</td>
+          <td></td>
+          <td><a href="https://www.marriott.com/en-us/hotels/oxrvb-ventura-beach-marriott/overview/" target="_blank">marriott.com</a></td>
+        </tr>
+        <tr>
+          <td>Ventura Beach</td>
+          <td>Beach</td>
+          <td>Ventura, CA</td>
+          <td></td>
+          <td>4.6</td>
+          <td>Dog-friendly beach. Lots of squirrels and drift wood.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Shops at Ojai</td>
+          <td>Shopping</td>
+          <td>Ojai, CA</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="https://www.ojaivisitors.com/ojai-ca-shopping" target="_blank">ojaivisitors.com</a></td>
+        </tr>
+        <tr>
+          <td>Mothers</td>
+          <td>Restaurant</td>
+          <td>Ventura, CA</td>
+          <td></td>
+          <td>4.1</td>
+          <td>Tacos</td>
+          <td><a href="https://www.motherstacos.com/" target="_blank">motherstacos.com</a></td>
+        </tr>
+        <tr>
+          <td>Cajun Kitchen Cafe</td>
+          <td>Restaurant</td>
+          <td>Ventura, CA</td>
+          <td></td>
+          <td>4.6</td>
+          <td>Brunch</td>
+          <td><a href="https://cajunkitchencafe.com/ventura" target="_blank">cajunkitchencafe.com</a></td>
+        </tr>
+        <tr>
+          <td>Lazy Dog</td>
+          <td>Restaurant</td>
+          <td>Oxnard, CA</td>
+          <td>5 paws</td>
+          <td>4.4</td>
+          <td>Dog menu</td>
+          <td><a href="https://www.lazydogrestaurants.com/locations/oxnard-ca" target="_blank">lazydogrestaurants.com</a></td>
+        </tr>
+        <tr>
+          <td>Granville</td>
+          <td>Restaurant</td>
+          <td>Burbank, CA</td>
+          <td></td>
+          <td>4.5</td>
+          <td></td>
+          <td><a href="https://www.granvillerestaurants.com/" target="_blank">granvillerestaurants.com</a></td>
+        </tr>
+        <tr>
+          <td>Republik Coffee</td>
+          <td>Restaurant</td>
+          <td>Burbank, CA</td>
+          <td></td>
+          <td>4.6</td>
+          <td>Brunch</td>
+          <td><a href="https://republikcoffee.com/" target="_blank">republikcoffee.com</a></td>
+        </tr>
+        <tr>
+          <td>Morrison's Burbank</td>
+          <td>Restaurant</td>
+          <td>Burbank, CA</td>
+          <td></td>
+          <td>4.5</td>
+          <td></td>
+          <td><a href="https://www.morrisonburbank.com/" target="_blank">morrisonburbank.com</a></td>
+        </tr>
+        <tr>
+          <td>Finney's</td>
+          <td>Restaurant</td>
+          <td>Burbank, CA</td>
+          <td></td>
+          <td>4.4</td>
+          <td></td>
+          <td><a href="https://www.finneyscrafthouse.com/burbank/" target="_blank">finneyscrafthouse.com</a></td>
+        </tr>
+        <tr>
+          <td>DTF</td>
+          <td>Restaurant</td>
+          <td>Glendale, CA</td>
+          <td></td>
+          <td>4.5</td>
+          <td></td>
+          <td><a href="https://dtf.com/en-us/locations/glendale" target="_blank">dtf.com</a></td>
+        </tr>
+        <tr>
+          <td>Bone Kettle</td>
+          <td>Restaurant</td>
+          <td>Pasadena, CA</td>
+          <td>5 paws</td>
+          <td>4.0</td>
+          <td>Dog menu. Southeast Asian cuisine.</td>
+          <td><a href="https://www.bonekettle.com/" target="_blank">bonekettle.com</a></td>
+        </tr>
+        <tr>
+          <td>Osawa</td>
+          <td>Restaurant</td>
+          <td>Pasadena, CA</td>
+          <td></td>
+          <td>4.7</td>
+          <td>Japanese</td>
+          <td><a href="https://www.theosawa.com/" target="_blank">theosawa.com</a></td>
+        </tr>
+        <tr>
+          <td>Superpeach</td>
+          <td>Restaurant</td>
+          <td>Los Angeles, CA</td>
+          <td></td>
+          <td>4.0</td>
+          <td>Century City</td>
+          <td><a href="https://www.momofuku.com/restaurants/super-peach" target="_blank">momofuku.com</a></td>
+        </tr>
+        <tr>
+          <td>Golden Road</td>
+          <td>Restaurant / Brewery</td>
+          <td>Los Angeles, CA</td>
+          <td>4 paws</td>
+          <td>4.5</td>
+          <td>Dog menu. Atwater Village.</td>
+          <td><a href="https://www.goldenroad.la/" target="_blank">goldenroad.la</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
