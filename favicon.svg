@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Forest green rounded background -->
+  <rect width="32" height="32" rx="7" fill="#166433"/>
+  <!-- Cream paw print, scaled and centered in the 32×32 box -->
+  <g transform="translate(5.5, 3.5) scale(0.88)" fill="#F5F2ED">
+    <!-- two upper toe beans -->
+    <ellipse cx="9" cy="7" rx="2.1" ry="2.6"/>
+    <ellipse cx="15" cy="7" rx="2.1" ry="2.6"/>
+    <!-- two side toe beans -->
+    <ellipse cx="5.2" cy="12.5" rx="2.1" ry="2.6"/>
+    <ellipse cx="18.8" cy="12.5" rx="2.1" ry="2.6"/>
+    <!-- main pad -->
+    <path d="M7 20c0-2.9 2.2-5.2 5-5.2s5 2.3 5 5.2a3.6 3.6 0 0 1-3.6 3.6H10.6A3.6 3.6 0 0 1 7 20z"/>
+  </g>
+</svg>
