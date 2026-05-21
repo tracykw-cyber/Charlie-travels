@@ -3,7 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>wander, wag, eat</title>
+<title>wander, wag, eat — dog-friendly restaurants & travel guides</title>
+
+<!-- SEO -->
+<meta name="description" content="Pet-friendly restaurant and travel guides for families who never leave their dog behind. Curated picks across Southern California and beyond — great food, great stays, tail wags guaranteed.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://wanderwageat.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wanderwageat.com/">
+<meta property="og:site_name" content="wander, wag, eat">
+<meta property="og:title" content="wander, wag, eat — dog-friendly restaurants & travel guides">
+<meta property="og:description" content="Pet-friendly restaurant and travel guides for families who never leave their dog behind. Curated picks across Southern California and beyond.">
+<meta property="og:image" content="https://wanderwageat.com/og-image.jpg">
+<meta property="og:image:alt" content="wander, wag, eat">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="wander, wag, eat — dog-friendly restaurants & travel guides">
+<meta name="twitter:description" content="Pet-friendly restaurant and travel guides for families who never leave their dog behind.">
+<meta name="twitter:image" content="https://wanderwageat.com/og-image.jpg">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "wander, wag, eat",
+  "url": "https://wanderwageat.com",
+  "description": "Pet-friendly restaurant and travel guides for families who never leave their dog behind.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "wander, wag, eat",
+    "url": "https://wanderwageat.com",
+    "email": "info@wanderwageat.com",
+    "sameAs": ["https://www.instagram.com/wander.wag.eat/"]
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://wanderwageat.com/wander-wag-eat-restaurants.html",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <style>
@@ -112,17 +156,44 @@
   }
 
   .nav-drawer a:hover { background: var(--bark-pale); color: var(--bark); }
+  .nav-drawer a.active { background: var(--forest-pale); color: var(--forest); font-weight: 500; }
 
   .nav-drawer-logo {
     font-family: 'Handelson Three', cursive;
-    font-size: 1.4rem;
     font-weight: 400;
     font-style: normal;
-    color: var(--forest);
+    font-size: 1.5rem;
+    letter-spacing: 0.04em;
+    color: var(--forest, #166433);
     display: block;
-    padding: 0 0.25rem 0.75rem;
-    margin-bottom: 0.5rem;
     white-space: nowrap;
+    padding: 0 0.25rem 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .nav-disabled {
+    font-size: 1rem;
+    color: var(--muted);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    opacity: 0.45;
+    cursor: default;
+    white-space: nowrap;
+  }
+
+  .nav-coming-soon {
+    font-size: 0.55rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    background: var(--bark-light);
+    color: white;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+    margin-left: auto;
   }
 
   .nav-drawer-divider { height: 1px; background: var(--border); margin: 0 0 1rem; }
@@ -318,7 +389,7 @@
     flex-direction: column;
     gap: 0.6rem;
     transition: transform 0.2s, box-shadow 0.2s;
-    cursor: default;
+    cursor: pointer;
   }
 
   .nav-card:hover {
@@ -423,6 +494,29 @@
 
   .footer-links a:hover { color: white; }
 
+  .footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-social a {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  .footer-social a:hover { color: white; }
+
+  .footer-social .icon-svg { width: 1.1em; height: 1.1em; flex-shrink: 0; }
+
+
   .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.2); margin-top: 0.5rem; }
 
 
@@ -445,10 +539,9 @@
     /* Nav cards */
     .section-nav { padding: 2.5rem 1.25rem; }
     .nav-cards { grid-template-columns: 1fr; gap: 0.85rem; }
-    .nav-card { padding: 1.25rem 1.25rem; flex-direction: row; align-items: center; gap: 1rem; }
-    .nav-card-icon { font-size: 1.5rem; margin-bottom: 0; flex-shrink: 0; }
-    .nav-card-title { font-size: 1.05rem; }
-    .nav-card-desc { display: none; }
+    .nav-cards { grid-template-columns: 1fr; gap: 0.85rem; }
+    .nav-card { padding: 1.25rem; }
+    .nav-card-icon { font-size: 1.5rem; }
 
     /* Mission strip */
     .mission-strip { padding: 3rem 1.25rem; }
@@ -471,14 +564,6 @@
     padding: 0 0.3em;
     line-height: 1;
     vertical-align: baseline;
-  }
-  .nav-drawer-logo {
-    font-family: 'Handelson Three', cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
-    letter-spacing: 0.04em;
-    color: var(--forest, #166433);
   }
   .mission-strip-sig, .sig-text {
     font-family: 'Handelson Three', cursive;
@@ -524,6 +609,11 @@
   <span class="nav-drawer-logo">wander, wag, eat</span>
   <div class="nav-drawer-divider"></div>
   <a href="index.html">Home</a>
+  <span class="nav-disabled">Restaurants <span class="nav-coming-soon">Soon</span></span>
+  <a href="wander-wag-eat-stays.html">Stay</a>
+  <span class="nav-disabled">Explore <span class="nav-coming-soon">Soon</span></span>
+  <span class="nav-disabled">Destinations <span class="nav-coming-soon">Soon</span></span>
+  <a href="wander-wag-eat-about.html">About</a>
 </div>
 
 <nav id="main-nav">
@@ -542,6 +632,10 @@
         <p class="hero-tagline">"Great food and great adventures<br>shouldn't have a pet policy."</p>
     <p class="hero-sub">Restaurants, stays, and adventures worth going to, complete with ratings and health scores. So you never have to choose between a good meal and your favorite companion.</p>
     
+      <div class="hero-ctas">
+        <a href="wander-wag-eat-restaurants.html" class="btn-primary">Browse Restaurants</a>
+        <a href="wander-wag-eat-destinations.html" class="btn-secondary">Explore Destinations</a>
+      </div>
       </div>
       <div class="hero-right">
         <img src="image-1779299152095.jpg" alt="Charlie and family" class="hero-charlie">
@@ -556,26 +650,30 @@
   <div class="section-label">Everything in one place</div>
   <h2 class="section-title">Where do you want to <em>start?</em></h2>
   <div class="nav-cards">
-    <div class="nav-card">
+    <a href="wander-wag-eat-restaurants.html" class="nav-card">
       <div class="nav-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M3 2v7c0 1.1.9 2 2 2h1v11"/><path d="M6 2v20"/><path d="M15 2a5 5 0 0 1 5 5v8h-5V2z"/><path d="M20 15v7"/></svg></div>
       <div class="nav-card-title">Restaurants</div>
       <div class="nav-card-desc">Quality-first picks with Google & Yelp ratings, health scores, and dog-friendly patio details.</div>
-    </div>
-    <div class="nav-card">
+      <div class="nav-card-link">Browse restaurants →</div>
+    </a>
+    <a href="wander-wag-eat-stays.html" class="nav-card">
       <div class="nav-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg></div>
       <div class="nav-card-title">Stay</div>
       <div class="nav-card-desc">Hotels that actually welcome dogs — rated on amenities, comfort, and fun for your pup.</div>
-    </div>
-    <div class="nav-card">
+      <div class="nav-card-link">Find a stay →</div>
+    </a>
+    <a href="wander-wag-eat-explore.html" class="nav-card">
       <div class="nav-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
       <div class="nav-card-title">Explore</div>
       <div class="nav-card-desc">Parks, beaches, hikes, and pit stops where everyone — four legs included — is welcome.</div>
-    </div>
-    <div class="nav-card">
+      <div class="nav-card-link">Start exploring →</div>
+    </a>
+    <a href="wander-wag-eat-destinations.html" class="nav-card">
       <div class="nav-card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg></div>
       <div class="nav-card-title">Destinations</div>
       <div class="nav-card-desc">Full trip guides bundling the best places to eat, stay, and explore by location.</div>
-    </div>
+      <div class="nav-card-link">Plan a trip →</div>
+    </a>
   </div>
 </div>
 
@@ -593,6 +691,16 @@
 <footer class="site-footer">
   <div class="footer-inner">
     
+    <div class="footer-links">
+      <a href="wander-wag-eat-restaurants.html">Restaurants</a>
+      <a href="wander-wag-eat-stays.html">Stay</a>
+      <a href="wander-wag-eat-explore.html">Explore</a>
+      <a href="wander-wag-eat-destinations.html">Destinations</a>
+      <a href="wander-wag-eat-about.html">About</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/wander.wag.eat/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> @wander.wag.eat</a>
+    </div>
     <p class="footer-copy">Made with <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> for families who bring everyone along.</p>
   </div>
 </footer>
