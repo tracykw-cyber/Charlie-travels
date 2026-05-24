@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stay — wander, wag, eat</title>
+<title>Destinations — wander, wag, eat</title>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   @font-face {
@@ -27,17 +27,15 @@
     --forest-light: #85a145;
     --forest-pale: #eef3e6;
     --sage: #95ab67;
-    --sage-pale: #f0f4e8;
     --charcoal: #1a1a18;
     --muted: #6b6b60;
     --border: rgba(112, 74, 46, 0.15);
   }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
     background: var(--cream);
     color: var(--charcoal);
-    font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
   }
@@ -70,25 +68,14 @@
   }
 
   .hamburger {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 32px;
-    height: 32px;
-    padding: 4px;
-    flex-shrink: 0;
+    background: none; border: none; cursor: pointer;
+    display: flex; flex-direction: column; justify-content: center;
+    gap: 5px; width: 32px; height: 32px; padding: 4px; flex-shrink: 0;
   }
 
   .hamburger span {
-    display: block;
-    width: 22px;
-    height: 1.5px;
-    background: var(--charcoal);
-    border-radius: 2px;
+    display: block; width: 22px; height: 1.5px;
+    background: var(--charcoal); border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.25s ease;
     transform-origin: center;
   }
@@ -98,36 +85,26 @@
   .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
   .nav-drawer {
-    position: fixed;
-    top: 0; left: 0;
-    width: 220px;
-    height: 100vh;
+    position: fixed; top: 0; left: 0;
+    width: 220px; height: 100vh;
     background: var(--cream);
     border-right: 1px solid var(--border);
-    z-index: 99;
-    padding: 1.25rem 1rem 1rem;
+    z-index: 99; padding: 1.25rem 1rem 1rem;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    flex-direction: column;
-    gap: 0;
+    align-items: stretch; flex-direction: column; gap: 0;
   }
 
   .nav-drawer.open { transform: translateX(0); }
 
   .nav-drawer a {
-    font-size: 1rem;
-    color: var(--muted);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
+    font-size: 1rem; color: var(--muted); text-decoration: none;
+    padding: 0.5rem 1rem; border-radius: 10px;
     transition: background 0.15s, color 0.15s;
     display: flex;
-    white-space: nowrap;
-    align-items: center;
-    gap: 0.75rem;
+    white-space: nowrap; align-items: center; gap: 0.75rem;
   }
 
   .nav-drawer a:hover { background: var(--bark-pale); color: var(--bark); }
@@ -172,19 +149,12 @@
     margin-bottom: 1.5rem;
   }
 
-  .nav-drawer-divider {
-    height: 1px;
-    background: var(--border);
-    margin: 0 0 1rem;
-  }
+  .nav-drawer-divider { height: 1px; background: var(--border); margin: 0 0 1rem; }
 
   .nav-overlay {
-    position: fixed;
-    inset: 0;
+    position: fixed; inset: 0;
     background: rgba(44, 44, 42, 0.3);
-    z-index: 98;
-    opacity: 0;
-    pointer-events: none;
+    z-index: 98; opacity: 0; pointer-events: none;
     transition: opacity 0.3s ease;
   }
 
@@ -202,395 +172,326 @@
   }
 
   .page-eyebrow {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--bark);
-    margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--bark); margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 0.6rem;
   }
 
   .page-eyebrow::before {
-    content: '';
-    display: block;
-    width: 1.5rem;
-    height: 1px;
-    background: var(--bark-light);
+    content: ""; display: block;
+    width: 1.5rem; height: 1px; background: var(--bark-light);
   }
 
   .page-title {
-    font-family: 'DM Serif Display', serif;
+    font-family: "DM Serif Display", serif;
     font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15;
-    color: var(--charcoal);
+    line-height: 1.15; color: var(--charcoal);
   }
 
-  .page-title em {
-    font-style: italic;
-    color: var(--forest);
-  }
+  .page-title em { font-style: italic; color: var(--forest); }
+  .page-subtitle { font-size: 1rem; color: var(--muted); margin-top: 0.5rem; }
 
-  .page-count {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-top: 0.5rem;
-  }
-
-  /* FILTERS */
-  .filters {
-    padding: 0 2.5rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .filter-label {
-    font-size: 0.78rem;
-    font-weight: 500;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  .filter-btn {
-    background: var(--warm-white);
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--muted);
-    padding: 0.4rem 1rem;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-
-  .filter-btn:hover { border-color: var(--bark-light); color: var(--bark); }
-  .filter-btn.active { background: var(--bark); border-color: var(--bark); color: white; }
-
-  /* GRID */
-  .stays-grid {
+  /* DESTINATION GRID */
+  .dest-grid {
     padding: 0 2.5rem 5rem;
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 1.5rem;
   }
 
-  /* CARD */
-  .card {
+  /* DESTINATION CARD */
+  .dest-card {
     background: var(--warm-white);
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
+    cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
+    position: relative;
   }
 
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 32px rgba(44, 44, 42, 0.08);
+  .dest-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(44,44,42,0.1);
   }
 
-  /* CAROUSEL */
-  .card-carousel {
-    width: 100%;
-    height: 200px;
+  .dest-photo {
+    height: 220px;
+    background: var(--forest);
     position: relative;
     overflow: hidden;
-    background: var(--bark-pale);
-    border-radius: 16px 16px 0 0;
-  }
-
-  .carousel-track {
     display: flex;
-    height: 100%;
-    transition: transform 0.35s ease;
+    align-items: flex-end;
   }
 
-  .carousel-slide {
-    min-width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: var(--bark-light);
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
+  .dest-photo-placeholder {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 0.5rem;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em;
   }
 
-  .carousel-slide img {
+  .dest-photo-placeholder span { font-size: 2rem; }
+
+  .dest-photo-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(22,100,51,0.85) 0%, transparent 55%);
+    z-index: 1;
+  }
+
+  .dest-photo-content {
+    position: relative; z-index: 2;
+    padding: 1.25rem 1.5rem;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0; left: 0;
   }
 
-  .carousel-slide-icon { font-size: 1.75rem; opacity: 0.4; }
-  .carousel-slide-label { opacity: 0.6; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.7rem; font-weight: 500; }
-
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.85);
-    border: none;
-    border-radius: 50%;
-    width: 28px; height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 0.8rem;
-    color: var(--charcoal);
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.2s;
-    padding: 0;
+  .dest-name {
+    font-family: "DM Serif Display", serif;
+    font-size: 1.6rem;
+    color: white;
+    line-height: 1.15;
   }
 
-  .card-carousel:hover .carousel-btn { opacity: 1; }
-  .carousel-btn.prev { left: 8px; }
-  .carousel-btn.next { right: 8px; }
-  .carousel-btn.hidden { display: none; }
-
-  .carousel-dots {
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 5px;
-    z-index: 2;
-  }
-
-  .carousel-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.5);
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-  }
-
-  .carousel-dot.active { background: white; transform: scale(1.2); }
-
-  /* CARD TOP */
-  .card-top {
-    padding: 1.25rem 1.25rem 1rem;
-    border-bottom: none;
-  }
-
-  .card-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.2rem;
-    color: var(--charcoal);
-  }
-
-  .card-meta {
+  .dest-region {
     font-size: 0.78rem;
-    color: var(--muted);
-    margin-top: 0.3rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  .card-meta-dot {
-    width: 3px; height: 3px;
-    border-radius: 50%;
-    background: var(--bark-light);
-    display: inline-block;
-  }
-
-  /* PAW SCORES */
-  .card-paw-scores {
-    padding: 1rem 1.25rem;
-    border-bottom: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-  }
-
-  .paw-score-item {
-    background: var(--forest-pale);
-    border-radius: 10px;
-    padding: 0.6rem 0.5rem;
-    text-align: center;
-  }
-
-  .paw-score-label {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: var(--forest);
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-  }
-
-  .paw-score-value {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--forest);
-  }
-
-  /* RATINGS */
-  .card-ratings {
-    padding: 0.85rem 1.25rem;
-    display: flex;
-    gap: 1.25rem;
-    border-bottom: none;
-    align-items: center;
-  }
-
-  .rating-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  .rating-source {
-    font-size: 0.65rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: 0.2rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--muted);
-    font-weight: 500;
   }
 
-  .rating-value {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--charcoal);
+  .dest-body { padding: 1.25rem 1.5rem; }
+
+  .dest-counts {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .dest-count {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
-  }
-
-  .rating-star { color: var(--bark-light); font-size: 0.85rem; }
-
-  .ratings-updated {
-    padding: 0 1.25rem 0.6rem;
-    font-size: 0.68rem;
-    color: var(--muted);
-    opacity: 0.6;
-    letter-spacing: 0.03em;
-  }
-
-  .rating-divider { width: 1px; height: 32px; background: var(--border); }
-
-  .overall-paw {
-    margin-left: auto;
-    text-align: right;
-  }
-
-  .overall-paw .rating-value { color: var(--forest); justify-content: flex-end; }
-
-  /* PROS CONS */
-  .card-pros-cons {
-    padding: 1rem 1.25rem;
-    border-bottom: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-  }
-
-  .pros-col, .cons-col {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
-
-  .pros-cons-label {
-    font-size: 0.65rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.1rem;
-  }
-
-  .pros-col .pros-cons-label { color: var(--forest); }
-  .cons-col .pros-cons-label { color: var(--bark); }
-
-  .pros-cons-item {
+    gap: 0.35rem;
     font-size: 0.8rem;
     color: var(--muted);
-    line-height: 1.5;
-    display: flex;
-    gap: 0.35rem;
-    align-items: flex-start;
+    font-weight: 500;
   }
 
-  .pros-cons-item::before {
-    flex-shrink: 0;
-    margin-top: 1px;
+  .dest-count-num {
+    font-size: 1rem;
+    color: var(--charcoal);
+    font-weight: 600;
   }
 
-  .pros-col .pros-cons-item::before { content: '✓'; color: var(--forest); font-size: 0.7rem; }
-  .cons-col .pros-cons-item::before { content: '–'; color: var(--bark-light); font-size: 0.7rem; }
-
-  /* DESCRIPTION */
-  .card-desc {
-    padding: 0.9rem 1.25rem;
+  .dest-desc {
     font-size: 0.88rem;
     color: var(--muted);
     line-height: 1.7;
-    flex: 1;
-    font-style: italic;
+    margin-bottom: 1.25rem;
   }
 
-  /* FOOTER */
-  .card-footer {
-    padding: 0.85rem 1.25rem;
-    border-top: 1px solid var(--border);
-    display: flex;
+  .dest-cta {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-  }
-
-  .card-location {
-    font-size: 0.78rem;
-    color: var(--muted);
-  }
-
-  .card-link {
-    font-size: 0.78rem;
+    gap: 0.5rem;
+    font-size: 0.82rem;
     font-weight: 500;
     color: var(--forest);
     text-decoration: none;
+    padding: 0.55rem 1.1rem;
+    border: 1px solid var(--forest);
+    border-radius: 100px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .dest-cta:hover { background: var(--forest); color: white; }
+
+  /* DETAIL PAGE */
+  .detail-page {
+    display: none;
+    padding-top: 72px;
+  }
+
+  .detail-page.visible { display: block; }
+  .dest-grid-section { display: block; }
+  .dest-grid-section.hidden { display: none; }
+
+  .detail-hero {
+    height: 340px;
+    background: var(--forest);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .detail-hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(22,100,51,0.9) 0%, rgba(22,100,51,0.3) 100%);
+  }
+
+  .detail-hero-content {
+    position: relative; z-index: 2;
+    padding: 2.5rem 3rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .detail-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+    margin-bottom: 1rem;
+    background: none;
+    border: none;
+    font-family: "DM Sans", sans-serif;
     transition: color 0.15s;
   }
 
-  .card-link:hover { color: var(--bark); }
+  .detail-back:hover { color: white; }
 
-  .card.hidden { display: none; }
-
-  /* COMING SOON */
-  .coming-soon-badge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background: rgba(22, 100, 51, 0.85);
+  .detail-title {
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
     color: white;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.7rem;
-    border-radius: 20px;
-    z-index: 3;
-    backdrop-filter: blur(4px);
+    line-height: 1.1;
   }
+
+  .detail-subtitle {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.65);
+    margin-top: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .detail-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem 5rem;
+  }
+
+  .detail-section { margin-bottom: 3.5rem; }
+
+  .detail-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: none;
+  }
+
+  .detail-section-icon { font-size: 1.1rem; }
+
+  .detail-section-title {
+    font-family: "DM Serif Display", serif;
+    font-size: 1.4rem;
+    color: var(--charcoal);
+  }
+
+  .detail-section-count {
+    font-size: 0.75rem;
+    color: var(--muted);
+    background: var(--bark-pale);
+    padding: 0.2rem 0.6rem;
+    border-radius: 100px;
+    margin-left: auto;
+  }
+
+  /* SPOT CARDS inside detail */
+  .spot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .spot-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.1rem 1.25rem;
+    transition: box-shadow 0.2s;
+  }
+
+  .spot-card:hover { box-shadow: 0 6px 20px rgba(44,44,42,0.07); }
+
+  .spot-name {
+    font-family: "DM Serif Display", serif;
+    font-size: 1.05rem;
+    color: var(--charcoal);
+    margin-bottom: 0.3rem;
+  }
+
+  .spot-type {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .spot-ratings {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .spot-rating {
+    font-size: 0.78rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .spot-rating strong { color: var(--charcoal); font-size: 0.85rem; }
+  .spot-star { color: var(--bark-light); }
+  .spot-paw { color: var(--forest); font-size: 0.85rem; }
+
+  .spot-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+  }
+
+  .spot-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .spot-tag {
+    font-size: 0.68rem;
+    font-weight: 500;
+    padding: 0.2rem 0.55rem;
+    border-radius: 100px;
+    background: var(--forest-pale);
+    color: var(--forest);
+  }
+
+  .spot-tag.eat { background: var(--bark-pale); color: var(--bark); }
+
+  .spot-link {
+    font-size: 0.75rem;
+    color: var(--forest);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .spot-link:hover { color: var(--bark); }
 
 
   @media (max-width: 768px) {
@@ -600,16 +501,16 @@
     .page-header { padding: 6rem 1.5rem 2.5rem; flex-direction: column; gap: 0.5rem; }
     .page-title { font-size: clamp(1.8rem, 6vw, 2.5rem); }
 
-    /* Filters */
-    .filters { padding: 0 1.25rem 1.25rem; gap: 0.5rem; }
-    .filter-btn { font-size: 0.78rem; padding: 0.35rem 0.85rem; }
+    /* Destination cards */
+    .dest-grid { padding: 0 1.25rem 3rem; grid-template-columns: 1fr; }
+    .dest-card { max-width: 100%; }
+    .dest-counts { flex-wrap: wrap; gap: 0.5rem; }
 
-    /* Cards */
-    .stays-grid { padding: 0 1.25rem 3rem; grid-template-columns: 1fr; }
-    .paw-score-grid { flex-wrap: wrap; gap: 0.5rem; }
-    .card-pros-cons { grid-template-columns: 1fr; gap: 0.5rem; }
-    .card-ratings { flex-wrap: wrap; gap: 0.75rem; }
-    .card-footer { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    /* Detail view */
+    .detail-hero-content { padding: 1.25rem; }
+    .detail-hero-title { font-size: clamp(1.5rem, 6vw, 2rem); }
+    .detail-body { padding: 2rem 1.25rem 3rem; }
+    .spot-grid { grid-template-columns: 1fr; }
 
     /* Footer */
     .site-footer { padding: 2rem 1.25rem; }
@@ -753,12 +654,11 @@
 <body>
 
 <div class="nav-overlay" id="nav-overlay" onclick="toggleMenu()"></div>
-
 <div class="nav-drawer" id="nav-drawer">
   <span class="nav-drawer-logo">wander, wag, eat</span>
   <a href="index.html">Home</a>
   <a href="wander-wag-eat-restaurants.html">Restaurants</a>
-  <a href="wander-wag-eat-stays.html" class="active">Stay</a>
+  <a href="wander-wag-eat-stays.html">Stay</a>
   <span class="nav-disabled">Explore <span class="nav-coming-soon">Soon</span></span>
   <span class="nav-disabled">Destinations <span class="nav-coming-soon">Soon</span></span>
   <a href="wander-wag-eat-about.html">About</a>
@@ -771,269 +671,276 @@
   <a href="index.html" class="nav-logo">wander, wag, eat</a>
 </nav>
 
-<div class="page-header">
-  <div class="page-eyebrow">Charlie-approved stays</div>
-  <h1 class="page-title">Places worth <em>staying.</em></h1>
-  <p class="page-count" id="result-count">Showing all 3 stays</p>
-</div>
-
-<div class="filters">
-  <span class="filter-label">Filter by</span>
-  <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
-  <button class="filter-btn" onclick="filterCards('Mammoth', this)">Mammoth</button>
-  <button class="filter-btn" onclick="filterCards('Ventura', this)">Ventura</button>
-</div>
-
-<div class="stays-grid" id="grid">
-
-  <!-- Limelight -->
-  <div class="card" data-location="Mammoth">
-    <div class="card-carousel has-photos" data-index="0">
-      <div class="carousel-track">
-        <div class="carousel-slide"><img src="images/limelight-1.jpg" alt="Limelight Hotel Mammoth" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/limelight-2.jpg" alt="Limelight Hotel Mammoth" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/limelight-3.jpg" alt="Limelight Hotel Mammoth" loading="lazy"></div>
-      </div>
-      <button class="carousel-btn prev hidden" onclick="moveCarousel(this,-1)">&#8249;</button>
-      <button class="carousel-btn next hidden" onclick="moveCarousel(this,1)">&#8250;</button>
-      <div class="carousel-dots"></div>
-    </div>
-    <div class="card-top">
-      <div class="card-name">Limelight Hotel</div>
-      <div class="card-meta">
-        <span>Mammoth, CA</span><span class="card-meta-dot"></span><span>Hotel</span>
-      </div>
-    </div>
-    <div class="card-paw-scores">
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> PawMenities</div>
-        <div class="paw-score-value">5 / 5</div>
-      </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg> PawFortable</div>
-        <div class="paw-score-value">5 / 5</div>
-      </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> PawFun</div>
-        <div class="paw-score-value">5 / 5</div>
-      </div>
-    </div>
-    <div class="card-ratings">
-      <div class="rating-item">
-        <div class="rating-source">Google</div>
-        <div class="rating-value"><span class="rating-star">★</span> 4.3</div>
-      </div>
-      <div class="rating-divider"></div>
-      <div class="rating-item">
-        <div class="rating-source">Yelp</div>
-        <div class="rating-value"><span class="rating-star" style="color:#d32323;">★</span> —</div>
-      </div>
-      <div class="rating-item overall-paw">
-        <div class="rating-source">Overall paw</div>
-        <div class="rating-value"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> 5 / 5</div>
-      </div>
-    </div>
-    <div class="ratings-updated">Data as of May 2026</div>
-    <div class="card-pros-cons">
-      <div class="pros-col">
-        <div class="pros-cons-label">Pros</div>
-        <div class="pros-cons-item">Brand new, spacious rooms</div>
-        <div class="pros-cons-item">Dog bed & bowl provided on request</div>
-        <div class="pros-cons-item">Super dog-friendly staff</div>
-      </div>
-      <div class="cons-col">
-        <div class="pros-cons-label">Cons</div>
-        <div class="pros-cons-item">Lots of stairs down to the village to take the gondola</div>
-      </div>
-    </div>
-
-    <div class="card-desc">"Charlie loved the room and her own dog bed. She had a great time looking out the window at the snow."</div>
-    <div class="card-footer">
-      <span class="card-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Mammoth, CA</span>
-      <a href="https://www.limelighthotels.com/mammoth" class="card-link" target="_blank">Visit site ↗</a>
-    </div>
+<!-- DESTINATION GRID -->
+<div class="dest-grid-section" id="grid-section">
+  <div class="page-header">
+    <div class="page-eyebrow">Travel with Charlie</div>
+    <h1 class="page-title">Places worth <em>wandering.</em></h1>
+    <p class="page-subtitle">Full guides for pet-friendly destinations — where to eat, stay, and explore.</p>
   </div>
 
-  <!-- Westin Monache -->
-  <div class="card" data-location="Mammoth">
-    <div class="card-carousel" data-index="0">
-      <span class="coming-soon-badge">Coming soon</span>
-      <div class="carousel-track">
-        <div class="carousel-slide">
-          <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-          <span class="carousel-slide-label">Add photo</span>
+  <div class="dest-grid">
+
+    <!-- Mammoth -->
+    <div class="dest-card" onclick="showDetail('mammoth')">
+      <div class="dest-photo">
+        <div class="dest-photo-placeholder"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M8 3L3 21h18L14 9l-3 4-3-10z"/></svg></span>Add photo</div>
+        <div class="dest-photo-overlay"></div>
+        <div class="dest-photo-content">
+          <div class="dest-name">Mammoth Lakes</div>
+          <div class="dest-region">Eastern Sierra, California</div>
         </div>
       </div>
-      <button class="carousel-btn prev hidden" onclick="moveCarousel(this,-1)">&#8249;</button>
-      <button class="carousel-btn next hidden" onclick="moveCarousel(this,1)">&#8250;</button>
-      <div class="carousel-dots"></div>
-    </div>
-    <div class="card-top">
-      <div class="card-name">Westin Monache Resort</div>
-      <div class="card-meta">
-        <span>Mammoth, CA</span><span class="card-meta-dot"></span><span>Hotel</span>
+      <div class="dest-body">
+        <div class="dest-counts">
+          <div class="dest-count"><span class="dest-count-num">2</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M3 2v7c0 1.1.9 2 2 2h1v11"/><path d="M6 2v20"/><path d="M15 2a5 5 0 0 1 5 5v8h-5V2z"/><path d="M20 15v7"/></svg> Restaurants</div>
+          <div class="dest-count"><span class="dest-count-num">2</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg> Stays</div>
+          <div class="dest-count"><span class="dest-count-num">1</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Explore</div>
+        </div>
+        <p class="dest-desc">A mountain escape that welcomes dogs year-round. Great trails, cozy patios, and hotels that actually love your pup.</p>
+        <span class="dest-cta">View guide ↗</span>
       </div>
     </div>
-    <div class="card-paw-scores">
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> PawMenities</div>
-        <div class="paw-score-value">3 / 5</div>
-      </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg> PawFortable</div>
-        <div class="paw-score-value">—</div>
-      </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> PawFun</div>
-        <div class="paw-score-value">—</div>
-      </div>
-    </div>
-    <div class="card-ratings">
-      <div class="rating-item">
-        <div class="rating-source">Google</div>
-        <div class="rating-value"><span class="rating-star">★</span> 3.8</div>
-      </div>
-      <div class="rating-divider"></div>
-      <div class="rating-item">
-        <div class="rating-source">Yelp</div>
-        <div class="rating-value"><span class="rating-star" style="color:#d32323;">★</span> —</div>
-      </div>
-      <div class="rating-item overall-paw">
-        <div class="rating-source">Overall paw</div>
-        <div class="rating-value"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> 4 / 5</div>
-      </div>
-    </div>
-    <div class="ratings-updated">Data as of May 2026</div>
 
-    <div class="card-footer">
-      <span class="card-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Mammoth, CA</span>
-      <a href="https://www.marriott.com/en-us/hotels/mmhwi-the-westin-monache-resort-mammoth/overview/" class="card-link" target="_blank">Visit site ↗</a>
-    </div>
-  </div>
-
-  <!-- Ventura Beach Marriott -->
-  <div class="card" data-location="Ventura">
-    <div class="card-carousel" data-index="0">
-      <span class="coming-soon-badge">Coming soon</span>
-      <div class="carousel-track">
-        <div class="carousel-slide">
-          <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
-          <span class="carousel-slide-label">Add photo</span>
+    <!-- Ventura -->
+    <div class="dest-card" onclick="showDetail('ventura')">
+      <div class="dest-photo">
+        <div class="dest-photo-placeholder"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" class="icon-svg"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></span>Add photo</div>
+        <div class="dest-photo-overlay"></div>
+        <div class="dest-photo-content">
+          <div class="dest-name">Ventura</div>
+          <div class="dest-region">Southern California Coast</div>
         </div>
       </div>
-      <button class="carousel-btn prev hidden" onclick="moveCarousel(this,-1)">&#8249;</button>
-      <button class="carousel-btn next hidden" onclick="moveCarousel(this,1)">&#8250;</button>
-      <div class="carousel-dots"></div>
-    </div>
-    <div class="card-top">
-      <div class="card-name">Ventura Beach Marriott</div>
-      <div class="card-meta">
-        <span>Ventura, CA</span><span class="card-meta-dot"></span><span>Hotel</span>
+      <div class="dest-body">
+        <div class="dest-counts">
+          <div class="dest-count"><span class="dest-count-num">3</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M3 2v7c0 1.1.9 2 2 2h1v11"/><path d="M6 2v20"/><path d="M15 2a5 5 0 0 1 5 5v8h-5V2z"/><path d="M20 15v7"/></svg> Restaurants</div>
+          <div class="dest-count"><span class="dest-count-num">1</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg> Stay</div>
+          <div class="dest-count"><span class="dest-count-num">2</span> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Explore</div>
+        </div>
+        <p class="dest-desc">A laid-back coastal town with one of the few dog beaches in SoCal, great tacos, and a charming downtown to wander through.</p>
+        <span class="dest-cta">View guide ↗</span>
       </div>
     </div>
-    <div class="card-paw-scores">
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> PawMenities</div>
-        <div class="paw-score-value">—</div>
-      </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg> PawFortable</div>
-        <div class="paw-score-value">—</div>
-      </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> PawFun</div>
-        <div class="paw-score-value">—</div>
-      </div>
-    </div>
-    <div class="card-ratings">
-      <div class="rating-item">
-        <div class="rating-source">Google</div>
-        <div class="rating-value"><span class="rating-star">★</span> 4.2</div>
-      </div>
-      <div class="rating-divider"></div>
-      <div class="rating-item">
-        <div class="rating-source">Yelp</div>
-        <div class="rating-value"><span class="rating-star" style="color:#d32323;">★</span> —</div>
-      </div>
-      <div class="rating-item overall-paw">
-        <div class="rating-source">Overall paw</div>
-        <div class="rating-value"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> —</div>
-      </div>
-    </div>
-    <div class="ratings-updated">Data as of May 2026</div>
 
-    <div class="card-footer">
-      <span class="card-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Ventura, CA</span>
-      <a href="https://www.marriott.com/en-us/hotels/oxrvb-ventura-beach-marriott/overview/" class="card-link" target="_blank">Visit site ↗</a>
+  </div>
+</div>
+
+<!-- MAMMOTH DETAIL -->
+<div class="detail-page" id="detail-mammoth">
+  <div class="detail-hero">
+    <div class="detail-hero-overlay"></div>
+    <div class="detail-hero-content">
+      <button class="detail-back" onclick="showGrid()">← All destinations</button>
+      <div class="detail-title">Mammoth Lakes</div>
+      <div class="detail-subtitle">Eastern Sierra, California</div>
     </div>
   </div>
 
+  <div class="detail-body">
+
+    <div class="detail-section">
+      <div class="detail-section-header">
+        <span class="detail-section-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M3 2v7c0 1.1.9 2 2 2h1v11"/><path d="M6 2v20"/><path d="M15 2a5 5 0 0 1 5 5v8h-5V2z"/><path d="M20 15v7"/></svg></span>
+        <span class="detail-section-title">Restaurants</span>
+        <span class="detail-section-count">2 spots</span>
+      </div>
+      <div class="spot-grid">
+        <div class="spot-card">
+          <div class="spot-name">Shelter Distilling</div>
+          <div class="spot-type">Restaurant & Bar</div>
+          <div class="spot-ratings">
+            <div class="spot-rating"><span class="spot-star">★</span> <strong>4.2</strong> Google</div>
+          </div>
+          <a href="https://shelterdistilling.com/" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+        <div class="spot-card">
+          <div class="spot-name">Sidedoor Winebar & Cafe</div>
+          <div class="spot-type">Wine Bar & Cafe</div>
+          <div class="spot-ratings">
+            <div class="spot-rating"><span class="spot-star">★</span> <strong>4.0</strong> Google</div>
+          </div>
+          <div class="spot-tags"><span class="spot-tag">Patio</span></div>
+          <div class="spot-desc">Small outdoor seating area — can get crowded when it's cold outside.</div>
+          <a href="https://sidedoormammoth.com/" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-section-header">
+        <span class="detail-section-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg></span>
+        <span class="detail-section-title">Stay</span>
+        <span class="detail-section-count">2 spots</span>
+      </div>
+      <div class="spot-grid">
+        <div class="spot-card">
+          <div class="spot-name">Limelight Hotel</div>
+          <div class="spot-type">Hotel</div>
+          <div class="spot-ratings">
+            <div class="spot-rating"><span class="spot-star">★</span> <strong>4.3</strong> Google</div>
+            <div class="spot-paw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> 5 / 5</div>
+          </div>
+          <div class="spot-tags">
+            <span class="spot-tag">Dog bed provided</span>
+            <span class="spot-tag">Dog bowl provided</span>
+            <span class="spot-tag">Super dog-friendly</span>
+          </div>
+          <div class="spot-desc">"Charlie loved the room and her own dog bed. She had a great time looking out the window at the snow."</div>
+          <a href="https://www.limelighthotels.com/mammoth" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+        <div class="spot-card">
+          <div class="spot-name">Westin Monache Resort</div>
+          <div class="spot-type">Hotel</div>
+          <div class="spot-ratings">
+            <div class="spot-rating"><span class="spot-star">★</span> <strong>3.8</strong> Google</div>
+            <div class="spot-paw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> 4 / 5</div>
+          </div>
+          <a href="https://www.marriott.com/en-us/hotels/mmhwi-the-westin-monache-resort-mammoth/overview/" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-section-header">
+        <span class="detail-section-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+        <span class="detail-section-title">Explore</span>
+        <span class="detail-section-count">1 spot</span>
+      </div>
+      <div class="spot-grid">
+        <div class="spot-card">
+          <div class="spot-name">Chevron / Jersey Mike's</div>
+          <div class="spot-type">Dog Rest Area · Lone Pine, CA</div>
+          <div class="spot-ratings">
+            <div class="spot-rating"><span class="spot-star">★</span> <strong>3.4</strong> Google</div>
+          </div>
+          <div class="spot-desc">A handy pit stop on the way up to Mammoth — great place to stretch your legs and let Charlie take a break.</div>
+          <a href="https://www.jerseymikes.com/20314/lone-pine-ca" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- VENTURA DETAIL -->
+<div class="detail-page" id="detail-ventura">
+  <div class="detail-hero" style="background: #1a4d6e;">
+    <div class="detail-hero-overlay" style="background: linear-gradient(to top, rgba(26,77,110,0.9) 0%, rgba(26,77,110,0.3) 100%);"></div>
+    <div class="detail-hero-content">
+      <button class="detail-back" onclick="showGrid()">← All destinations</button>
+      <div class="detail-title">Ventura</div>
+      <div class="detail-subtitle">Southern California Coast</div>
+    </div>
+  </div>
+
+  <div class="detail-body">
+
+    <div class="detail-section">
+      <div class="detail-section-header">
+        <span class="detail-section-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M3 2v7c0 1.1.9 2 2 2h1v11"/><path d="M6 2v20"/><path d="M15 2a5 5 0 0 1 5 5v8h-5V2z"/><path d="M20 15v7"/></svg></span>
+        <span class="detail-section-title">Restaurants</span>
+        <span class="detail-section-count">3 spots</span>
+      </div>
+      <div class="spot-grid">
+        <div class="spot-card">
+          <div class="spot-name">Lazy Dog</div>
+          <div class="spot-type">Restaurant · Oxnard, CA</div>
+          <div class="spot-ratings">
+            <div class="spot-rating"><span class="spot-star">★</span> <strong>4.4</strong> Google</div>
+            <div class="spot-paw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> 5 / 5</div>
+          </div>
+          <div class="spot-tags"><span class="spot-tag eat">Dog menu</span><span class="spot-tag">Patio</span></div>
+          <a href="https://www.lazydogrestaurants.com/locations/oxnard-ca" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+        <div class="spot-card">
+          <div class="spot-name">Mother's Tacos</div>
+          <div class="spot-type">Tacos</div>
+          <div class="spot-ratings">
+            <div class="spot-rating"><span class="spot-star">★</span> <strong>4.1</strong> Google</div>
+          </div>
+          <a href="https://www.motherstacos.com/" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+        <div class="spot-card">
+          <div class="spot-name">Cajun Kitchen Cafe</div>
+          <div class="spot-type">Brunch</div>
+          <div class="spot-ratings">
+            <div class="spot-rating"><span class="spot-star">★</span> <strong>4.6</strong> Google</div>
+          </div>
+          <a href="https://cajunkitchencafe.com/ventura" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-section-header">
+        <span class="detail-section-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg></span>
+        <span class="detail-section-title">Stay</span>
+        <span class="detail-section-count">1 spot</span>
+      </div>
+      <div class="spot-grid">
+        <div class="spot-card">
+          <div class="spot-name">Ventura Beach Marriott</div>
+          <div class="spot-type">Hotel</div>
+          <div class="spot-ratings">
+            <div class="spot-rating"><span class="spot-star">★</span> <strong>4.2</strong> Google</div>
+          </div>
+          <a href="https://www.marriott.com/en-us/hotels/oxrvb-ventura-beach-marriott/overview/" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <div class="detail-section-header">
+        <span class="detail-section-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+        <span class="detail-section-title">Explore</span>
+        <span class="detail-section-count">2 spots</span>
+      </div>
+      <div class="spot-grid">
+        <div class="spot-card">
+          <div class="spot-name">Ventura Beach</div>
+          <div class="spot-type">Dog Beach</div>
+          <div class="spot-ratings">
+            <div class="spot-rating"><span class="spot-star">★</span> <strong>4.6</strong> Google</div>
+            <div class="spot-paw"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> 3 / 5</div>
+          </div>
+          <div class="spot-tags"><span class="spot-tag">Dogs allowed</span><span class="spot-tag">Quiet on weekdays</span></div>
+          <div class="spot-desc">One of very few dog beaches around. Pretty quiet on a weekday. Watch out for squirrels and driftwood.</div>
+          <a href="https://www.cityofventura.ca.gov/1850/City-Beaches" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+        <div class="spot-card">
+          <div class="spot-name">Shops at Ojai</div>
+          <div class="spot-type">Shopping · Ojai, CA</div>
+          <a href="https://www.ojaivisitors.com/ojai-ca-shopping" class="spot-link" target="_blank">Visit site ↗</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 
 <script>
   function toggleMenu() {
-    const drawer = document.getElementById('nav-drawer');
-    const overlay = document.getElementById('nav-overlay');
-    const burger = document.getElementById('hamburger');
-    const open = drawer.classList.toggle('open');
-    overlay.classList.toggle('open', open);
-    burger.classList.toggle('open', open);
+    const drawer = document.getElementById("nav-drawer");
+    const overlay = document.getElementById("nav-overlay");
+    const burger = document.getElementById("hamburger");
+    const open = drawer.classList.toggle("open");
+    overlay.classList.toggle("open", open);
+    burger.classList.toggle("open", open);
   }
 
-  function moveCarousel(btn, dir) {
-    const carousel = btn.closest('.card-carousel');
-    const track = carousel.querySelector('.carousel-track');
-    const slides = track.querySelectorAll('.carousel-slide');
-    let idx = parseInt(carousel.dataset.index) + dir;
-    idx = Math.max(0, Math.min(idx, slides.length - 1));
-    carousel.dataset.index = idx;
-    track.style.transform = `translateX(-${idx * 100}%)`;
-    updateCarouselUI(carousel, idx, slides.length);
+  function showDetail(id) {
+    document.getElementById("grid-section").classList.add("hidden");
+    document.querySelectorAll(".detail-page").forEach(p => p.classList.remove("visible"));
+    document.getElementById("detail-" + id).classList.add("visible");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
-  function updateCarouselUI(carousel, idx, total) {
-    const dots = carousel.querySelectorAll('.carousel-dot');
-    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-    carousel.querySelector('.carousel-btn.prev').classList.toggle('hidden', idx === 0);
-    carousel.querySelector('.carousel-btn.next').classList.toggle('hidden', idx === total - 1);
+  function showGrid() {
+    document.querySelectorAll(".detail-page").forEach(p => p.classList.remove("visible"));
+    document.getElementById("grid-section").classList.remove("hidden");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
-
-  function initCarousels() {
-    document.querySelectorAll('.card-carousel').forEach(carousel => {
-      const slides = carousel.querySelectorAll('.carousel-slide');
-      const dotsContainer = carousel.querySelector('.carousel-dots');
-      if (slides.length > 1) {
-        dotsContainer.innerHTML = '';
-        slides.forEach((_, i) => {
-          const dot = document.createElement('div');
-          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-          dot.onclick = () => {
-            carousel.dataset.index = i;
-            carousel.querySelector('.carousel-track').style.transform = `translateX(-${i * 100}%)`;
-            updateCarouselUI(carousel, i, slides.length);
-          };
-          dotsContainer.appendChild(dot);
-        });
-        carousel.querySelector('.carousel-btn.next').classList.remove('hidden');
-      }
-    });
-  }
-
-  function filterCards(filter, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const cards = document.querySelectorAll('.card');
-    let visible = 0;
-    cards.forEach(card => {
-      const match = filter === 'all' || card.dataset.location === filter;
-      card.classList.toggle('hidden', !match);
-      if (match) visible++;
-    });
-    document.getElementById('result-count').textContent =
-      `Showing ${visible} stay${visible !== 1 ? 's' : ''}${filter !== 'all' ? ' in ' + filter : ''}`;
-  }
-
-  initCarousels();
 </script>
 
 

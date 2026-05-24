@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stay — wander, wag, eat</title>
+<title>Explore — wander, wag, eat</title>
 <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   @font-face {
@@ -34,23 +34,18 @@
   }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
     background: var(--cream);
     color: var(--charcoal);
-    font-size: 16px;
     line-height: 1.6;
     overflow-x: hidden;
   }
 
   /* NAV */
   nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 1.25rem 2.5rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100; padding: 1.25rem 2.5rem;
+    display: flex; align-items: center; gap: 1rem;
     background: rgba(245, 242, 237, 0.94);
     backdrop-filter: blur(12px);
     border-bottom: none;
@@ -59,36 +54,22 @@
 
   .nav-logo {
     font-family: 'Handelson Three', cursive;
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 2rem; font-weight: 400;
     letter-spacing: 0.04em;
-    
-    color: var(--forest);
-    text-decoration: none;
-    margin-left: 0.5rem;
+     color: var(--forest);
+    text-decoration: none; margin-left: 0.5rem;
       font-style: normal;
   }
 
   .hamburger {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 32px;
-    height: 32px;
-    padding: 4px;
-    flex-shrink: 0;
+    background: none; border: none; cursor: pointer;
+    display: flex; flex-direction: column; justify-content: center;
+    gap: 5px; width: 32px; height: 32px; padding: 4px; flex-shrink: 0;
   }
 
   .hamburger span {
-    display: block;
-    width: 22px;
-    height: 1.5px;
-    background: var(--charcoal);
-    border-radius: 2px;
+    display: block; width: 22px; height: 1.5px;
+    background: var(--charcoal); border-radius: 2px;
     transition: transform 0.25s ease, opacity 0.25s ease;
     transform-origin: center;
   }
@@ -98,36 +79,26 @@
   .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
   .nav-drawer {
-    position: fixed;
-    top: 0; left: 0;
-    width: 220px;
-    height: 100vh;
+    position: fixed; top: 0; left: 0;
+    width: 220px; height: 100vh;
     background: var(--cream);
     border-right: 1px solid var(--border);
-    z-index: 99;
-    padding: 1.25rem 1rem 1rem;
+    z-index: 99; padding: 1.25rem 1rem 1rem;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    flex-direction: column;
-    gap: 0;
+    align-items: stretch; flex-direction: column; gap: 0;
   }
 
   .nav-drawer.open { transform: translateX(0); }
 
   .nav-drawer a {
-    font-size: 1rem;
-    color: var(--muted);
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
+    font-size: 1rem; color: var(--muted); text-decoration: none;
+    padding: 0.5rem 1rem; border-radius: 10px;
     transition: background 0.15s, color 0.15s;
     display: flex;
-    white-space: nowrap;
-    align-items: center;
-    gap: 0.75rem;
+    white-space: nowrap; align-items: center; gap: 0.75rem;
   }
 
   .nav-drawer a:hover { background: var(--bark-pale); color: var(--bark); }
@@ -172,19 +143,12 @@
     margin-bottom: 1.5rem;
   }
 
-  .nav-drawer-divider {
-    height: 1px;
-    background: var(--border);
-    margin: 0 0 1rem;
-  }
+  .nav-drawer-divider { height: 1px; background: var(--border); margin: 0 0 1rem; }
 
   .nav-overlay {
-    position: fixed;
-    inset: 0;
+    position: fixed; inset: 0;
     background: rgba(44, 44, 42, 0.3);
-    z-index: 98;
-    opacity: 0;
-    pointer-events: none;
+    z-index: 98; opacity: 0; pointer-events: none;
     transition: opacity 0.3s ease;
   }
 
@@ -193,8 +157,7 @@
   /* PAGE HEADER */
   .page-header {
     padding: 8rem 2.5rem 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; margin: 0 auto;
   
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'%3E%3Cg transform='translate(12,20) rotate(-20,12,12)' fill='%23166433' opacity='0.07'%3E%3Cellipse cx='9' cy='7' rx='1.9' ry='2.5'/%3E%3Cellipse cx='15' cy='7' rx='1.9' ry='2.5'/%3E%3Cellipse cx='5.5' cy='12.5' rx='1.9' ry='2.5'/%3E%3Cellipse cx='18.5' cy='12.5' rx='1.9' ry='2.5'/%3E%3Cpath d='M7 19.5c0-2.8 2.2-5 5-5s5 2.2 5 5a3.5 3.5 0 0 1-3.5 3.5h-3A3.5 3.5 0 0 1 7 19.5z'/%3E%3C/g%3E%3Cg transform='translate(55,82) rotate(20,12,12)' fill='%23166433' opacity='0.07'%3E%3Cellipse cx='9' cy='7' rx='1.9' ry='2.5'/%3E%3Cellipse cx='15' cy='7' rx='1.9' ry='2.5'/%3E%3Cellipse cx='5.5' cy='12.5' rx='1.9' ry='2.5'/%3E%3Cellipse cx='18.5' cy='12.5' rx='1.9' ry='2.5'/%3E%3Cpath d='M7 19.5c0-2.8 2.2-5 5-5s5 2.2 5 5a3.5 3.5 0 0 1-3.5 3.5h-3A3.5 3.5 0 0 1 7 19.5z'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 220px 330px;
@@ -202,85 +165,54 @@
   }
 
   .page-eyebrow {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--bark);
-    margin-bottom: 0.75rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
+    font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--bark); margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 0.6rem;
   }
 
   .page-eyebrow::before {
-    content: '';
-    display: block;
-    width: 1.5rem;
-    height: 1px;
-    background: var(--bark-light);
+    content: ""; display: block;
+    width: 1.5rem; height: 1px; background: var(--bark-light);
   }
 
   .page-title {
-    font-family: 'DM Serif Display', serif;
+    font-family: "DM Serif Display", serif;
     font-size: clamp(2rem, 4vw, 3rem);
-    line-height: 1.15;
-    color: var(--charcoal);
+    line-height: 1.15; color: var(--charcoal);
   }
 
-  .page-title em {
-    font-style: italic;
-    color: var(--forest);
-  }
-
-  .page-count {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-top: 0.5rem;
-  }
+  .page-title em { font-style: italic; color: var(--forest); }
+  .page-count { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; }
 
   /* FILTERS */
   .filters {
     padding: 0 2.5rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    align-items: center;
+    max-width: 1200px; margin: 0 auto;
+    display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center;
   }
 
   .filter-label {
-    font-size: 0.78rem;
-    font-weight: 500;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    font-size: 0.78rem; font-weight: 500;
+    color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em;
   }
 
   .filter-btn {
-    background: var(--warm-white);
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 500;
-    color: var(--muted);
-    padding: 0.4rem 1rem;
-    cursor: pointer;
-    transition: all 0.15s;
+    background: var(--warm-white); border: 1px solid var(--border);
+    border-radius: 100px; font-family: "DM Sans", sans-serif;
+    font-size: 0.82rem; font-weight: 500; color: var(--muted);
+    padding: 0.4rem 1rem; cursor: pointer; transition: all 0.15s;
   }
 
   .filter-btn:hover { border-color: var(--bark-light); color: var(--bark); }
   .filter-btn.active { background: var(--bark); border-color: var(--bark); color: white; }
 
   /* GRID */
-  .stays-grid {
+  .explore-grid {
     padding: 0 2.5rem 5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1200px; margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 1.5rem;
   }
 
@@ -288,11 +220,9 @@
   .card {
     background: var(--warm-white);
     border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
+    border-radius: 16px; overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
+    display: flex; flex-direction: column;
   }
 
   .card:hover {
@@ -302,63 +232,33 @@
 
   /* CAROUSEL */
   .card-carousel {
-    width: 100%;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-    background: var(--bark-pale);
+    width: 100%; height: 190px;
+    position: relative; overflow: hidden;
+    background: var(--forest-pale);
     border-radius: 16px 16px 0 0;
   }
 
-  .carousel-track {
-    display: flex;
-    height: 100%;
-    transition: transform 0.35s ease;
-  }
+  .carousel-track { display: flex; height: 100%; transition: transform 0.35s ease; }
 
   .carousel-slide {
-    min-width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: var(--bark-light);
-    flex-shrink: 0;
-    position: relative;
-    overflow: hidden;
+    min-width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 0.5rem;
+    color: var(--forest-mid); flex-shrink: 0;
+    position: relative; overflow: hidden;
   }
 
-  .carousel-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0; left: 0;
-  }
-
+  .carousel-slide img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; }
   .carousel-slide-icon { font-size: 1.75rem; opacity: 0.4; }
   .carousel-slide-label { opacity: 0.6; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.7rem; font-weight: 500; }
 
   .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.85);
-    border: none;
-    border-radius: 50%;
-    width: 28px; height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 0.8rem;
-    color: var(--charcoal);
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.2s;
-    padding: 0;
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.85); border: none; border-radius: 50%;
+    width: 28px; height: 28px; display: flex; align-items: center;
+    justify-content: center; cursor: pointer; font-size: 0.8rem;
+    color: var(--charcoal); z-index: 2; opacity: 0;
+    transition: opacity 0.2s; padding: 0;
   }
 
   .card-carousel:hover .carousel-btn { opacity: 1; }
@@ -367,114 +267,68 @@
   .carousel-btn.hidden { display: none; }
 
   .carousel-dots {
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
+    position: absolute; bottom: 8px; left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    gap: 5px;
-    z-index: 2;
+    display: flex; gap: 5px; z-index: 2;
   }
 
   .carousel-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.5);
-    cursor: pointer;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: rgba(255,255,255,0.5); cursor: pointer;
     transition: background 0.2s, transform 0.2s;
   }
 
   .carousel-dot.active { background: white; transform: scale(1.2); }
 
+  /* TYPE BADGE */
+  .type-badge {
+    position: absolute; top: 10px; right: 10px;
+    background: rgba(255,255,255,0.9);
+    font-size: 0.65rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--forest); padding: 0.25rem 0.65rem;
+    border-radius: 100px; z-index: 2;
+  }
+
   /* CARD TOP */
   .card-top {
-    padding: 1.25rem 1.25rem 1rem;
+    padding: 1.1rem 1.25rem 0.9rem;
     border-bottom: none;
   }
 
   .card-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.2rem;
-    color: var(--charcoal);
+    font-family: "DM Serif Display", serif;
+    font-size: 1.15rem; color: var(--charcoal);
   }
 
   .card-meta {
-    font-size: 0.78rem;
-    color: var(--muted);
-    margin-top: 0.3rem;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
+    font-size: 0.78rem; color: var(--muted);
+    margin-top: 0.25rem; display: flex; align-items: center; gap: 0.4rem;
   }
 
   .card-meta-dot {
-    width: 3px; height: 3px;
-    border-radius: 50%;
-    background: var(--bark-light);
-    display: inline-block;
-  }
-
-  /* PAW SCORES */
-  .card-paw-scores {
-    padding: 1rem 1.25rem;
-    border-bottom: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-  }
-
-  .paw-score-item {
-    background: var(--forest-pale);
-    border-radius: 10px;
-    padding: 0.6rem 0.5rem;
-    text-align: center;
-  }
-
-  .paw-score-label {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    color: var(--forest);
-    font-weight: 500;
-    margin-bottom: 0.25rem;
-  }
-
-  .paw-score-value {
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--forest);
+    width: 3px; height: 3px; border-radius: 50%;
+    background: var(--bark-light); display: inline-block;
   }
 
   /* RATINGS */
   .card-ratings {
     padding: 0.85rem 1.25rem;
-    display: flex;
-    gap: 1.25rem;
+    display: flex; gap: 1.25rem;
     border-bottom: none;
     align-items: center;
   }
 
-  .rating-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
+  .rating-item { display: flex; flex-direction: column; gap: 0.2rem; }
 
   .rating-source {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--muted);
-    font-weight: 500;
+    font-size: 0.65rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted); font-weight: 500;
   }
 
   .rating-value {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--charcoal);
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
+    font-size: 1rem; font-weight: 500; color: var(--charcoal);
+    display: flex; align-items: center; gap: 0.25rem;
   }
 
   .rating-star { color: var(--bark-light); font-size: 0.85rem; }
@@ -489,108 +343,72 @@
 
   .rating-divider { width: 1px; height: 32px; background: var(--border); }
 
-  .overall-paw {
-    margin-left: auto;
-    text-align: right;
-  }
-
-  .overall-paw .rating-value { color: var(--forest); justify-content: flex-end; }
+  .paw-rating { margin-left: auto; text-align: right; }
+  .paw-rating .rating-value { color: var(--forest); justify-content: flex-end; }
 
   /* PROS CONS */
   .card-pros-cons {
-    padding: 1rem 1.25rem;
+    padding: 0.9rem 1.25rem;
     border-bottom: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;
   }
 
-  .pros-col, .cons-col {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-  }
+  .pros-col, .cons-col { display: flex; flex-direction: column; gap: 0.35rem; }
 
   .pros-cons-label {
-    font-size: 0.65rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.1rem;
+    font-size: 0.65rem; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.1rem;
   }
 
   .pros-col .pros-cons-label { color: var(--forest); }
   .cons-col .pros-cons-label { color: var(--bark); }
 
   .pros-cons-item {
-    font-size: 0.8rem;
-    color: var(--muted);
-    line-height: 1.5;
-    display: flex;
-    gap: 0.35rem;
-    align-items: flex-start;
+    font-size: 0.8rem; color: var(--muted);
+    line-height: 1.5; display: flex; gap: 0.35rem; align-items: flex-start;
   }
 
-  .pros-cons-item::before {
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
+  .pros-col .pros-cons-item::before { content: "✓"; color: var(--forest); font-size: 0.7rem; flex-shrink: 0; margin-top: 1px; }
+  .cons-col .pros-cons-item::before { content: "–"; color: var(--bark-light); font-size: 0.7rem; flex-shrink: 0; }
 
-  .pros-col .pros-cons-item::before { content: '✓'; color: var(--forest); font-size: 0.7rem; }
-  .cons-col .pros-cons-item::before { content: '–'; color: var(--bark-light); font-size: 0.7rem; }
-
-  /* DESCRIPTION */
+  /* DESC */
   .card-desc {
-    padding: 0.9rem 1.25rem;
-    font-size: 0.88rem;
-    color: var(--muted);
-    line-height: 1.7;
-    flex: 1;
-    font-style: italic;
+    padding: 0.9rem 1.25rem; font-size: 0.88rem;
+    color: var(--muted); line-height: 1.7; flex: 1; font-style: italic;
   }
+
+  /* TAGS */
+  .card-tags {
+    padding: 0.75rem 1.25rem;
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    border-bottom: none;
+  }
+
+  .tag {
+    font-size: 0.72rem; font-weight: 500;
+    padding: 0.25rem 0.65rem; border-radius: 100px;
+    background: var(--forest-pale); color: var(--forest);
+  }
+
+  .tag.warning { background: var(--bark-pale); color: var(--bark); }
 
   /* FOOTER */
   .card-footer {
     padding: 0.85rem 1.25rem;
     border-top: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; align-items: center; justify-content: space-between;
   }
 
-  .card-location {
-    font-size: 0.78rem;
-    color: var(--muted);
-  }
+  .card-location { font-size: 0.78rem; color: var(--muted); }
 
   .card-link {
-    font-size: 0.78rem;
-    font-weight: 500;
-    color: var(--forest);
-    text-decoration: none;
-    transition: color 0.15s;
+    font-size: 0.78rem; font-weight: 500; color: var(--forest);
+    text-decoration: none; transition: color 0.15s;
   }
 
   .card-link:hover { color: var(--bark); }
 
   .card.hidden { display: none; }
-
-  /* COMING SOON */
-  .coming-soon-badge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background: rgba(22, 100, 51, 0.85);
-    color: white;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 0.3rem 0.7rem;
-    border-radius: 20px;
-    z-index: 3;
-    backdrop-filter: blur(4px);
-  }
 
 
   @media (max-width: 768px) {
@@ -605,10 +423,8 @@
     .filter-btn { font-size: 0.78rem; padding: 0.35rem 0.85rem; }
 
     /* Cards */
-    .stays-grid { padding: 0 1.25rem 3rem; grid-template-columns: 1fr; }
-    .paw-score-grid { flex-wrap: wrap; gap: 0.5rem; }
+    .explore-grid { padding: 0 1.25rem 3rem; grid-template-columns: 1fr; }
     .card-pros-cons { grid-template-columns: 1fr; gap: 0.5rem; }
-    .card-ratings { flex-wrap: wrap; gap: 0.75rem; }
     .card-footer { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 
     /* Footer */
@@ -753,12 +569,11 @@
 <body>
 
 <div class="nav-overlay" id="nav-overlay" onclick="toggleMenu()"></div>
-
 <div class="nav-drawer" id="nav-drawer">
   <span class="nav-drawer-logo">wander, wag, eat</span>
   <a href="index.html">Home</a>
   <a href="wander-wag-eat-restaurants.html">Restaurants</a>
-  <a href="wander-wag-eat-stays.html" class="active">Stay</a>
+  <a href="wander-wag-eat-stays.html">Stay</a>
   <span class="nav-disabled">Explore <span class="nav-coming-soon">Soon</span></span>
   <span class="nav-disabled">Destinations <span class="nav-coming-soon">Soon</span></span>
   <a href="wander-wag-eat-about.html">About</a>
@@ -772,199 +587,230 @@
 </nav>
 
 <div class="page-header">
-  <div class="page-eyebrow">Charlie-approved stays</div>
-  <h1 class="page-title">Places worth <em>staying.</em></h1>
-  <p class="page-count" id="result-count">Showing all 3 stays</p>
+  <div class="page-eyebrow">Get outside with Charlie</div>
+  <h1 class="page-title">Adventures worth <em>taking.</em></h1>
+  <p class="page-count" id="result-count">Showing all 4 spots</p>
 </div>
 
 <div class="filters">
   <span class="filter-label">Filter by</span>
-  <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
-  <button class="filter-btn" onclick="filterCards('Mammoth', this)">Mammoth</button>
-  <button class="filter-btn" onclick="filterCards('Ventura', this)">Ventura</button>
+  <button class="filter-btn active" onclick="filterCards("all", this)">All</button>
+  <button class="filter-btn" onclick="filterCards("park", this)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M12 2L6 14h4v8h4v-8h4L12 2z"/></svg> Parks</button>
+  <button class="filter-btn" onclick="filterCards("beach", this)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><circle cx="12" cy="6" r="3"/><path d="M12 9v9"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg> Beaches</button>
+  <button class="filter-btn" onclick="filterCards("stop", this)"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg> Rest stops</button>
+  <button class="filter-btn" onclick="filterCards("Mammoth", this)">Mammoth</button>
+  <button class="filter-btn" onclick="filterCards("Ventura", this)">Ventura</button>
+  <button class="filter-btn" onclick="filterCards("Glendale", this)">Glendale</button>
 </div>
 
-<div class="stays-grid" id="grid">
+<div class="explore-grid" id="grid">
 
-  <!-- Limelight -->
-  <div class="card" data-location="Mammoth">
-    <div class="card-carousel has-photos" data-index="0">
-      <div class="carousel-track">
-        <div class="carousel-slide"><img src="images/limelight-1.jpg" alt="Limelight Hotel Mammoth" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/limelight-2.jpg" alt="Limelight Hotel Mammoth" loading="lazy"></div>
-        <div class="carousel-slide"><img src="images/limelight-3.jpg" alt="Limelight Hotel Mammoth" loading="lazy"></div>
-      </div>
-      <button class="carousel-btn prev hidden" onclick="moveCarousel(this,-1)">&#8249;</button>
-      <button class="carousel-btn next hidden" onclick="moveCarousel(this,1)">&#8250;</button>
-      <div class="carousel-dots"></div>
-    </div>
-    <div class="card-top">
-      <div class="card-name">Limelight Hotel</div>
-      <div class="card-meta">
-        <span>Mammoth, CA</span><span class="card-meta-dot"></span><span>Hotel</span>
-      </div>
-    </div>
-    <div class="card-paw-scores">
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> PawMenities</div>
-        <div class="paw-score-value">5 / 5</div>
-      </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg> PawFortable</div>
-        <div class="paw-score-value">5 / 5</div>
-      </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> PawFun</div>
-        <div class="paw-score-value">5 / 5</div>
-      </div>
-    </div>
-    <div class="card-ratings">
-      <div class="rating-item">
-        <div class="rating-source">Google</div>
-        <div class="rating-value"><span class="rating-star">★</span> 4.3</div>
-      </div>
-      <div class="rating-divider"></div>
-      <div class="rating-item">
-        <div class="rating-source">Yelp</div>
-        <div class="rating-value"><span class="rating-star" style="color:#d32323;">★</span> —</div>
-      </div>
-      <div class="rating-item overall-paw">
-        <div class="rating-source">Overall paw</div>
-        <div class="rating-value"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> 5 / 5</div>
-      </div>
-    </div>
-    <div class="ratings-updated">Data as of May 2026</div>
-    <div class="card-pros-cons">
-      <div class="pros-col">
-        <div class="pros-cons-label">Pros</div>
-        <div class="pros-cons-item">Brand new, spacious rooms</div>
-        <div class="pros-cons-item">Dog bed & bowl provided on request</div>
-        <div class="pros-cons-item">Super dog-friendly staff</div>
-      </div>
-      <div class="cons-col">
-        <div class="pros-cons-label">Cons</div>
-        <div class="pros-cons-item">Lots of stairs down to the village to take the gondola</div>
-      </div>
-    </div>
-
-    <div class="card-desc">"Charlie loved the room and her own dog bed. She had a great time looking out the window at the snow."</div>
-    <div class="card-footer">
-      <span class="card-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Mammoth, CA</span>
-      <a href="https://www.limelighthotels.com/mammoth" class="card-link" target="_blank">Visit site ↗</a>
-    </div>
-  </div>
-
-  <!-- Westin Monache -->
-  <div class="card" data-location="Mammoth">
+  <!-- Red Rock Canyon -->
+  <div class="card" data-location="Mammoth" data-type="park">
     <div class="card-carousel" data-index="0">
-      <span class="coming-soon-badge">Coming soon</span>
       <div class="carousel-track">
         <div class="carousel-slide">
-          <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
+          <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" class="icon-svg"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
           <span class="carousel-slide-label">Add photo</span>
         </div>
       </div>
       <button class="carousel-btn prev hidden" onclick="moveCarousel(this,-1)">&#8249;</button>
       <button class="carousel-btn next hidden" onclick="moveCarousel(this,1)">&#8250;</button>
       <div class="carousel-dots"></div>
+      <div class="type-badge">Park</div>
     </div>
     <div class="card-top">
-      <div class="card-name">Westin Monache Resort</div>
+      <div class="card-name">Red Rock Canyon State Park</div>
       <div class="card-meta">
-        <span>Mammoth, CA</span><span class="card-meta-dot"></span><span>Hotel</span>
-      </div>
-    </div>
-    <div class="card-paw-scores">
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> PawMenities</div>
-        <div class="paw-score-value">3 / 5</div>
-      </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg> PawFortable</div>
-        <div class="paw-score-value">—</div>
-      </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> PawFun</div>
-        <div class="paw-score-value">—</div>
+        <span>Cantil, CA</span><span class="card-meta-dot"></span><span>~1hr north of Mojave on Hwy 395</span>
       </div>
     </div>
     <div class="card-ratings">
       <div class="rating-item">
-        <div class="rating-source">Google</div>
-        <div class="rating-value"><span class="rating-star">★</span> 3.8</div>
+        <div class="rating-source">Human rating</div>
+        <div class="rating-value"><span class="rating-star">★</span> 4 / 5</div>
       </div>
       <div class="rating-divider"></div>
-      <div class="rating-item">
-        <div class="rating-source">Yelp</div>
-        <div class="rating-value"><span class="rating-star" style="color:#d32323;">★</span> —</div>
-      </div>
-      <div class="rating-item overall-paw">
-        <div class="rating-source">Overall paw</div>
+      <div class="rating-item paw-rating">
+        <div class="rating-source">Paw rating</div>
         <div class="rating-value"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> 4 / 5</div>
       </div>
     </div>
     <div class="ratings-updated">Data as of May 2026</div>
 
+
+    <div class="card-pros-cons">
+      <div class="pros-col">
+        <div class="pros-cons-label">Pros</div>
+        <div class="pros-cons-item">Beautiful ancient rock formations</div>
+        <div class="pros-cons-item">Right off Hwy 395 — great pit stop on the way to Mammoth</div>
+        <div class="pros-cons-item">Feels like you've left California entirely</div>
+      </div>
+      <div class="cons-col">
+        <div class="pros-cons-label">Cons</div>
+        <div class="pros-cons-item">Some areas are steep and hard to access</div>
+      </div>
+    </div>
+    <div class="card-tags">
+      <span class="tag">Hike</span>
+      <span class="tag">Pit stop</span>
+      <span class="tag warning">Bring water for your pup</span>
+    </div>
+    
     <div class="card-footer">
-      <span class="card-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Mammoth, CA</span>
-      <a href="https://www.marriott.com/en-us/hotels/mmhwi-the-westin-monache-resort-mammoth/overview/" class="card-link" target="_blank">Visit site ↗</a>
+      <span class="card-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Cantil, CA</span>
+      <a href="https://www.parks.ca.gov/RedRockCanyonStatePark" class="card-link" target="_blank">Visit site ↗</a>
     </div>
   </div>
 
-  <!-- Ventura Beach Marriott -->
-  <div class="card" data-location="Ventura">
+  <!-- Ventura Beach -->
+  <div class="card" data-location="Ventura" data-type="beach">
     <div class="card-carousel" data-index="0">
-      <span class="coming-soon-badge">Coming soon</span>
       <div class="carousel-track">
         <div class="carousel-slide">
-          <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></span>
+          <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" class="icon-svg"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></span>
           <span class="carousel-slide-label">Add photo</span>
         </div>
       </div>
       <button class="carousel-btn prev hidden" onclick="moveCarousel(this,-1)">&#8249;</button>
       <button class="carousel-btn next hidden" onclick="moveCarousel(this,1)">&#8250;</button>
       <div class="carousel-dots"></div>
+      <div class="type-badge">Beach</div>
     </div>
     <div class="card-top">
-      <div class="card-name">Ventura Beach Marriott</div>
-      <div class="card-meta">
-        <span>Ventura, CA</span><span class="card-meta-dot"></span><span>Hotel</span>
+      <div class="card-name">Ventura Beach</div>
+      <div class="card-meta"><span>Ventura, CA</span></div>
+    </div>
+    <div class="card-ratings">
+      <div class="rating-item">
+        <div class="rating-source">Google</div>
+        <div class="rating-value"><span class="rating-star">★</span> 4.6</div>
+      </div>
+      <div class="rating-divider"></div>
+      <div class="rating-item paw-rating">
+        <div class="rating-source">Paw rating</div>
+        <div class="rating-value"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> 3 / 5</div>
       </div>
     </div>
-    <div class="card-paw-scores">
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> PawMenities</div>
-        <div class="paw-score-value">—</div>
+    <div class="ratings-updated">Data as of May 2026</div>
+
+
+    <div class="card-pros-cons">
+      <div class="pros-col">
+        <div class="pros-cons-label">Pros</div>
+        <div class="pros-cons-item">One of very few dog beaches in SoCal</div>
+        <div class="pros-cons-item">Quiet and uncrowded on weekdays</div>
       </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M2 4v16"/><path d="M22 4v16"/><path d="M2 12h20"/><path d="M6 12V9a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"/><path d="M2 20h20"/></svg> PawFortable</div>
-        <div class="paw-score-value">—</div>
+      <div class="cons-col">
+        <div class="pros-cons-label">Cons</div>
+        <div class="pros-cons-item">Lots of squirrels and driftwood</div>
       </div>
-      <div class="paw-score-item">
-        <div class="paw-score-label"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> PawFun</div>
-        <div class="paw-score-value">—</div>
+    </div>
+    <div class="card-tags">
+      <span class="tag">Dogs allowed</span>
+      <span class="tag">Beach</span>
+    </div>
+    
+    <div class="card-footer">
+      <span class="card-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Ventura, CA</span>
+      <a href="https://www.cityofventura.ca.gov/1850/City-Beaches" class="card-link" target="_blank">Visit site ↗</a>
+    </div>
+  </div>
+
+  <!-- Brand Park -->
+  <div class="card" data-location="Glendale" data-type="park">
+    <div class="card-carousel" data-index="0">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M12 2L6 14h4v8h4v-8h4L12 2z"/></svg></span>
+          <span class="carousel-slide-label">Add photo</span>
+        </div>
+      </div>
+      <button class="carousel-btn prev hidden" onclick="moveCarousel(this,-1)">&#8249;</button>
+      <button class="carousel-btn next hidden" onclick="moveCarousel(this,1)">&#8250;</button>
+      <div class="carousel-dots"></div>
+      <div class="type-badge">Park</div>
+    </div>
+    <div class="card-top">
+      <div class="card-name">Brand Park</div>
+      <div class="card-meta"><span>Glendale, CA</span></div>
+    </div>
+    <div class="card-ratings">
+      <div class="rating-item">
+        <div class="rating-source">Human rating</div>
+        <div class="rating-value"><span class="rating-star">★</span> 4 / 5</div>
+      </div>
+      <div class="rating-divider"></div>
+      <div class="rating-item paw-rating">
+        <div class="rating-source">Paw rating</div>
+        <div class="rating-value"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> 3 / 5</div>
+      </div>
+    </div>
+    <div class="ratings-updated">Data as of May 2026</div>
+
+
+    <div class="card-pros-cons">
+      <div class="pros-col">
+        <div class="pros-cons-label">Pros</div>
+        <div class="pros-cons-item">Great views of Downtown LA and Griffith Park from higher up</div>
+        <div class="pros-cons-item">Paved for a good portion — easy walking</div>
+        <div class="pros-cons-item">Relatively quiet on weekdays</div>
+      </div>
+      <div class="cons-col">
+        <div class="pros-cons-label">Cons</div>
+        <div class="pros-cons-item">Lacking shade on the paved sections</div>
+        <div class="pros-cons-item">Bring plenty of water for your pup</div>
+      </div>
+    </div>
+    <div class="card-tags">
+      <span class="tag">Hike</span>
+      <span class="tag">City views</span>
+      <span class="tag warning">Low shade — bring water</span>
+    </div>
+    
+    <div class="card-footer">
+      <span class="card-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Glendale, CA</span>
+      <a href="https://www.glendaleca.gov/government/departments/community-services-parks/parks-facilities-historic-sites/brand-park" class="card-link" target="_blank">Visit site ↗</a>
+    </div>
+  </div>
+
+  <!-- Chevron / Jersey Mikes -->
+  <div class="card" data-location="Mammoth" data-type="stop">
+    <div class="card-carousel" data-index="0">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></span>
+          <span class="carousel-slide-label">Add photo</span>
+        </div>
+      </div>
+      <button class="carousel-btn prev hidden" onclick="moveCarousel(this,-1)">&#8249;</button>
+      <button class="carousel-btn next hidden" onclick="moveCarousel(this,1)">&#8250;</button>
+      <div class="carousel-dots"></div>
+      <div class="type-badge">Rest stop</div>
+    </div>
+    <div class="card-top">
+      <div class="card-name">Chevron / Jersey Mike's</div>
+      <div class="card-meta">
+        <span>Lone Pine, CA</span><span class="card-meta-dot"></span><span>On the way to Mammoth</span>
       </div>
     </div>
     <div class="card-ratings">
       <div class="rating-item">
         <div class="rating-source">Google</div>
-        <div class="rating-value"><span class="rating-star">★</span> 4.2</div>
-      </div>
-      <div class="rating-divider"></div>
-      <div class="rating-item">
-        <div class="rating-source">Yelp</div>
-        <div class="rating-value"><span class="rating-star" style="color:#d32323;">★</span> —</div>
-      </div>
-      <div class="rating-item overall-paw">
-        <div class="rating-source">Overall paw</div>
-        <div class="rating-value"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="icon-svg"><ellipse cx="9" cy="7" rx="1.8" ry="2.3"/><ellipse cx="15" cy="7" rx="1.8" ry="2.3"/><ellipse cx="5.5" cy="12" rx="1.8" ry="2.3"/><ellipse cx="18.5" cy="12" rx="1.8" ry="2.3"/><path d="M7.5 19c0-2.5 2-4.5 4.5-4.5s4.5 2 4.5 4.5a3 3 0 0 1-3 3h-3a3 3 0 0 1-3-3z"/></svg> —</div>
+        <div class="rating-value"><span class="rating-star">★</span> 3.4</div>
       </div>
     </div>
     <div class="ratings-updated">Data as of May 2026</div>
 
+
+    <div class="card-desc">A solid pit stop on Hwy 395 to stretch your legs, grab a bite, and let Charlie take a break before the final push to Mammoth.</div>
+    <div class="card-tags">
+      <span class="tag">Pit stop</span>
+      <span class="tag">Dog rest area</span>
+    </div>
     <div class="card-footer">
-      <span class="card-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Ventura, CA</span>
-      <a href="https://www.marriott.com/en-us/hotels/oxrvb-ventura-beach-marriott/overview/" class="card-link" target="_blank">Visit site ↗</a>
+      <span class="card-location"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg> Lone Pine, CA</span>
+      <a href="https://www.jerseymikes.com/20314/lone-pine-ca" class="card-link" target="_blank">Visit site ↗</a>
     </div>
   </div>
 
@@ -972,65 +818,66 @@
 
 <script>
   function toggleMenu() {
-    const drawer = document.getElementById('nav-drawer');
-    const overlay = document.getElementById('nav-overlay');
-    const burger = document.getElementById('hamburger');
-    const open = drawer.classList.toggle('open');
-    overlay.classList.toggle('open', open);
-    burger.classList.toggle('open', open);
+    const drawer = document.getElementById("nav-drawer");
+    const overlay = document.getElementById("nav-overlay");
+    const burger = document.getElementById("hamburger");
+    const open = drawer.classList.toggle("open");
+    overlay.classList.toggle("open", open);
+    burger.classList.toggle("open", open);
   }
 
   function moveCarousel(btn, dir) {
-    const carousel = btn.closest('.card-carousel');
-    const track = carousel.querySelector('.carousel-track');
-    const slides = track.querySelectorAll('.carousel-slide');
+    const carousel = btn.closest(".card-carousel");
+    const track = carousel.querySelector(".carousel-track");
+    const slides = track.querySelectorAll(".carousel-slide");
     let idx = parseInt(carousel.dataset.index) + dir;
     idx = Math.max(0, Math.min(idx, slides.length - 1));
     carousel.dataset.index = idx;
-    track.style.transform = `translateX(-${idx * 100}%)`;
+    track.style.transform = "translateX(-" + (idx * 100) + "%)";
     updateCarouselUI(carousel, idx, slides.length);
   }
 
   function updateCarouselUI(carousel, idx, total) {
-    const dots = carousel.querySelectorAll('.carousel-dot');
-    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-    carousel.querySelector('.carousel-btn.prev').classList.toggle('hidden', idx === 0);
-    carousel.querySelector('.carousel-btn.next').classList.toggle('hidden', idx === total - 1);
+    carousel.querySelectorAll(".carousel-dot").forEach((d, i) => d.classList.toggle("active", i === idx));
+    carousel.querySelector(".carousel-btn.prev").classList.toggle("hidden", idx === 0);
+    carousel.querySelector(".carousel-btn.next").classList.toggle("hidden", idx === total - 1);
   }
 
   function initCarousels() {
-    document.querySelectorAll('.card-carousel').forEach(carousel => {
-      const slides = carousel.querySelectorAll('.carousel-slide');
-      const dotsContainer = carousel.querySelector('.carousel-dots');
+    document.querySelectorAll(".card-carousel").forEach(carousel => {
+      const slides = carousel.querySelectorAll(".carousel-slide");
+      const dotsContainer = carousel.querySelector(".carousel-dots");
       if (slides.length > 1) {
-        dotsContainer.innerHTML = '';
+        dotsContainer.innerHTML = "";
         slides.forEach((_, i) => {
-          const dot = document.createElement('div');
-          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          const dot = document.createElement("div");
+          dot.className = "carousel-dot" + (i === 0 ? " active" : "");
           dot.onclick = () => {
             carousel.dataset.index = i;
-            carousel.querySelector('.carousel-track').style.transform = `translateX(-${i * 100}%)`;
+            carousel.querySelector(".carousel-track").style.transform = "translateX(-" + (i * 100) + "%)";
             updateCarouselUI(carousel, i, slides.length);
           };
           dotsContainer.appendChild(dot);
         });
-        carousel.querySelector('.carousel-btn.next').classList.remove('hidden');
+        carousel.querySelector(".carousel-btn.next").classList.remove("hidden");
       }
     });
   }
 
   function filterCards(filter, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const cards = document.querySelectorAll('.card');
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const cards = document.querySelectorAll(".card");
     let visible = 0;
     cards.forEach(card => {
-      const match = filter === 'all' || card.dataset.location === filter;
-      card.classList.toggle('hidden', !match);
+      const loc = card.dataset.location || "";
+      const type = card.dataset.type || "";
+      const match = filter === "all" || loc === filter || type === filter;
+      card.classList.toggle("hidden", !match);
       if (match) visible++;
     });
-    document.getElementById('result-count').textContent =
-      `Showing ${visible} stay${visible !== 1 ? 's' : ''}${filter !== 'all' ? ' in ' + filter : ''}`;
+    document.getElementById("result-count").textContent =
+      "Showing " + visible + " spot" + (visible !== 1 ? "s" : "");
   }
 
   initCarousels();
