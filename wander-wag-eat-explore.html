@@ -237,6 +237,21 @@
     background: var(--forest-pale);
     border-radius: 16px 16px 0 0;
   }
+  .card-coming-soon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(22, 100, 51, 0.85);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    z-index: 3;
+    backdrop-filter: blur(4px);
+  }
 
   .carousel-track { display: flex; height: 100%; transition: transform 0.35s ease; }
 
@@ -574,7 +589,7 @@
   <a href="index.html">Home</a>
   <a href="wander-wag-eat-restaurants.html">Restaurants</a>
   <a href="wander-wag-eat-stays.html">Stay</a>
-  <span class="nav-disabled">Explore <span class="nav-coming-soon">Soon</span></span>
+  <a href="wander-wag-eat-explore.html">Explore</a>
   <span class="nav-disabled">Destinations <span class="nav-coming-soon">Soon</span></span>
   <a href="wander-wag-eat-about.html">About</a>
 </div>
@@ -608,6 +623,7 @@
   <!-- Red Rock Canyon -->
   <div class="card" data-location="Mammoth" data-type="park">
     <div class="card-carousel" data-index="0">
+      <span class="card-coming-soon">Coming Soon</span>
       <div class="carousel-track">
         <div class="carousel-slide">
           <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" class="icon-svg"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
@@ -667,13 +683,13 @@
   <div class="card" data-location="Ventura" data-type="beach">
     <div class="card-carousel" data-index="0">
       <div class="carousel-track">
-        <div class="carousel-slide">
-          <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" class="icon-svg"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></span>
-          <span class="carousel-slide-label">Add photo</span>
-        </div>
+        <div class="carousel-slide"><img src="images/ventura-beach-1.jpg" alt="Ventura Beach" loading="lazy"></div>
+        <div class="carousel-slide"><img src="images/ventura-beach-2.jpg" alt="Ventura Beach" loading="lazy"></div>
+        <div class="carousel-slide"><img src="images/ventura-beach-3.jpg" alt="Ventura Beach" loading="lazy"></div>
+        <div class="carousel-slide"><img src="images/ventura-beach-4.jpg" alt="Ventura Beach" loading="lazy"></div>
       </div>
-      <button class="carousel-btn prev hidden" onclick="moveCarousel(this,-1)">&#8249;</button>
-      <button class="carousel-btn next hidden" onclick="moveCarousel(this,1)">&#8250;</button>
+      <button class="carousel-btn prev" onclick="moveCarousel(this,-1)">&#8249;</button>
+      <button class="carousel-btn next" onclick="moveCarousel(this,1)">&#8250;</button>
       <div class="carousel-dots"></div>
       <div class="type-badge">Beach</div>
     </div>
@@ -720,6 +736,7 @@
   <!-- Brand Park -->
   <div class="card" data-location="Glendale" data-type="park">
     <div class="card-carousel" data-index="0">
+      <span class="card-coming-soon">Coming Soon</span>
       <div class="carousel-track">
         <div class="carousel-slide">
           <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M12 2L6 14h4v8h4v-8h4L12 2z"/></svg></span>
@@ -777,6 +794,7 @@
   <!-- Chevron / Jersey Mikes -->
   <div class="card" data-location="Mammoth" data-type="stop">
     <div class="card-carousel" data-index="0">
+      <span class="card-coming-soon">Coming Soon</span>
       <div class="carousel-track">
         <div class="carousel-slide">
           <span class="carousel-slide-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="icon-svg"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></span>
